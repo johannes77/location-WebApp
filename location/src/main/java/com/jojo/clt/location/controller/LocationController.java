@@ -11,10 +11,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.jojo.clt.location.entities.Location;
 import com.jojo.clt.location.service.LocationService;
+import com.jojo.clt.location.util.EmailUtil;
 import com.jojo.clt.location.util.StudentValidation;
 
 @Controller
 public class LocationController {
+	
+	@Autowired
+	EmailUtil emailUtil;
+	
 	@Autowired
 	LocationService locationService;
 
@@ -33,6 +38,7 @@ public class LocationController {
 			msg = "please Enter Valid Email";
 		}
 		modelMap.addAttribute("msg", msg);
+		emailUtil.sendEmail("jtedla77@gmail.com", "Location", "suesseccfuly location created");
 		return "createLocation";
 
 	}

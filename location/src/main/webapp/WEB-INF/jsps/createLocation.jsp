@@ -11,9 +11,9 @@
 	<form action="saveLoc" method="post">
 	<pre>
 		Id:   <input type="text" name="id" /> <br>
-		email: <input type="text" name="email"/> <br>
 		Code: <input type="text" name="code" /> <br>
 		Name: <input type="text" name="name" /> <br>
+		email: <input type="text" name="email" /> <br>
 		Type: Urban<input type="radio" name="type" value="URBAN"/>
 			  Ruler<input type="radio" name="type" value="RULAR"/>
 		<input type="submit" value="save">
@@ -22,6 +22,7 @@
 ${msg}
 
 <a href="displayLocations">View All</a>
+<a href="showCreate"></a>
 
 </body>
 </html>

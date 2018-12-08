@@ -4,10 +4,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.event.TransactionalEventListener;
+import org.yaml.snakeyaml.events.Event;
 
 import com.jojo.clt.location.entities.Location;
 import com.jojo.clt.location.repository.LocationRepository;
-import com.jojo.clt.location.util.StudentValidation;
 
 @Service
 public class LocationServiceImpl implements LocationService {
@@ -48,4 +49,8 @@ public class LocationServiceImpl implements LocationService {
 		this.locationRepository = locationRepository;
 	}
 
+//	@TransactionalEventListener()
+//	public void handleTransactionalAddEvent(LocationServiceImpl event) {
+//		System.out.println(event.toString() + "johannes");
+//	}
 }
